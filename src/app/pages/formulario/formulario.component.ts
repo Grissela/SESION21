@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-formulario',
@@ -41,8 +42,7 @@ export class FormularioComponent implements OnInit {
   new_phone!:string;
   new_company!:string;
 
-  thead!:string
-
+  token="true";
 
 
 
@@ -52,16 +52,44 @@ export class FormularioComponent implements OnInit {
   }
 
   guardar(){
-    localStorage.setItem('username',this.username);
-    localStorage.setItem('email',this.email);
-    localStorage.setItem('password',this.password);
-    localStorage.setItem('confirm',this.confirm);
-    localStorage.setItem('firstname',this.firstname);
-    localStorage.setItem('lastname',this.lastname);
-    localStorage.setItem('age',this.age);
-    localStorage.setItem('estado',this.estado);
-    localStorage.setItem('phone',this.phone);
-    localStorage.setItem('company',this.company);
+    
+    
+    if (this.username != null && this.email != null && this.password != null && this.confirm != null &&
+      this.firstname != null && this.lastname!= null && this.age != null && this.estado != null &&
+      this.phone != null && this.company != null ){ 
+        localStorage.setItem('username',this.username);
+        localStorage.setItem('email',this.email);
+        localStorage.setItem('password',this.password);
+        localStorage.setItem('confirm',this.confirm);
+        localStorage.setItem('firstname',this.firstname);
+        localStorage.setItem('lastname',this.lastname);
+        localStorage.setItem('age',this.age);
+        localStorage.setItem('estado',this.estado);
+        localStorage.setItem('phone',this.phone);
+        localStorage.setItem('company',this.company);
+
+        localStorage.setItem('guardado', this.token);
+
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your work has been saved',
+          showConfirmButton: false,
+          timer: 1500
+        })
+    
+    }else {
+      // alert ('Los campos no debe estar vacio')
+      Swal.fire({
+      title: 'هل تريد الاستمرار؟',
+      icon: 'question',
+      iconHtml: '؟',
+      confirmButtonText: 'نعم',
+      cancelButtonText: 'لا',
+      showCancelButton: true,
+      showCloseButton: true
+    })
+    }
 
   }
   mostrar(){

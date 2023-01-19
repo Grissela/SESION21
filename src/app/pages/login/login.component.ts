@@ -21,20 +21,19 @@ export class LoginComponent implements OnInit {
   constructor(private route:Router) { }
 
   ngOnInit(): void {
-    this.validacion()
+    
   }
 
   validacion(){
-    localStorage.setItem('user','AD');
-    localStorage.setItem('pas','12345')
+    // localStorage.setItem('user','AD');
+    // localStorage.setItem('pas','12345')
 
-    this.new_user = localStorage.getItem('user');
-    this.new_pass = localStorage.getItem('pas');
+    // this.new_user = localStorage.getItem('user');
+    // this.new_pass = localStorage.getItem('pas');
 
-    if(this.new_user == this.username && this.new_pass==this.password){
-      // alert("correcto")
+    if(this.user == this.username && this.pas==this.password){
       localStorage.setItem('logeado',this.token);
-      this.route.navigate(['post']);
+      this.route.navigate(['login']);
       Swal.fire({
         position: 'top-end',
         icon: 'success',
@@ -44,7 +43,6 @@ export class LoginComponent implements OnInit {
       })
       
   }else{
-    // alert("Incorrecto")
     Swal.fire({
       icon: 'error',
       title: 'Datos Incorrectos',

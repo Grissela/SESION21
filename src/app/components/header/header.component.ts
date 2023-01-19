@@ -30,7 +30,21 @@ export class HeaderComponent implements OnInit {
           'success'
         )
         localStorage.removeItem('logeado');
-        this.route.navigate(['post']);
+        localStorage.removeItem('user');
+        localStorage.removeItem('pas');
+
+        localStorage.removeItem('username');
+        localStorage.removeItem('email');
+        localStorage.removeItem('password')
+        localStorage.removeItem('confirm');
+        localStorage.removeItem('firstname');
+        localStorage.removeItem('lastname');
+        localStorage.removeItem('age');
+        localStorage.removeItem('estado');
+        localStorage.removeItem('phone');
+        localStorage.removeItem('company');
+        localStorage.removeItem('guardado');
+        this.route.navigate(['login']);
       }
     })
     

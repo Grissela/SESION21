@@ -18,6 +18,18 @@ export class FormularioComponent implements OnInit {
   phone!:string;
   company!:string;
 
+  usuario!:string;
+  correo!:string;
+  contrasena!:string;
+  confirmar!:string;
+  primerNombre!:string;
+  Apellido!:string;
+  Edad!:string;
+  EstadoC!:string;
+  Telefono!:string;
+  Empresa!:string;
+
+
   new_username!:string;
   new_email!:string;
   new_password!:string;
@@ -29,6 +41,7 @@ export class FormularioComponent implements OnInit {
   new_phone!:string;
   new_company!:string;
 
+  thead!:string
 
 
 
@@ -52,7 +65,19 @@ export class FormularioComponent implements OnInit {
 
   }
   mostrar(){
+    
 
+    this.usuario='User name'
+    this.correo='Email'
+    this.contrasena='Password'
+    this.confirmar='Confirm password'
+    this.primerNombre='First name'
+    this.Apellido='Last name'
+    this.Edad='Age'
+    this.EstadoC='Estado Civil'
+    this.Telefono='Phone'
+    this.Empresa='Company'
+    
     this.new_username = String(localStorage.getItem('username'));
     this.new_email = String(localStorage.getItem('email'))
     this.new_password = String(localStorage.getItem('password'))

@@ -48,8 +48,40 @@
             <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-blue-800 mx-2" (click)="guardar()">Guardar</button>
             <button type="button" class="text-white bg-orange-700 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-blue-800" (click)="mostrar()">Mostrar</button>
         </div>
-        <p class="text-white">{{new_username}}</p>
+        
       
 </div>
-
+<table class="table-fixed w-[80%] text-white text-center   mx-auto mt-[4rem]">
+    
+    <thead class=" sm:min-width[360px]  max-width[640px]  text-sm text-yellow-300
+    md:text-base p-5 text-yellow-300">
+      <tr>
+        <th class="">{{usuario}}</th>
+        <th>{{correo}}</th>
+        <th>{{contrasena}}</th>
+        <th>{{confirmar}}</th>
+        <th>{{primerNombre}}</th>
+        <th>{{Apellido}}</th>
+        <th>{{Edad}}</th>
+        <th>{{EstadoC}}</th>
+        <th>{{Telefono}}</th>
+        <th>{{Empresa}}</th>
+      </tr>
+    </thead>
+    <tbody class="sm:min-width[360px]  max-width[640px] text-sm
+    md:text-base p-5">
+      <tr >
+        <td class="">{{new_username}}</td>
+        <td>{{new_email}}</td>
+        <td>{{new_password}}</td>
+        <td>{{new_confirm}}</td>
+        <td>{{new_firstname}}</td>
+        <td>{{new_lastname}}</td>
+        <td>{{new_age}}</td>
+        <td>{{new_estado}}</td>
+        <td>{{new_phone}}</td>
+        <td>{{new_company}}</td>
+      </tr>
+    </tbody>
+  </table>
   

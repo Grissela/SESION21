@@ -11,7 +11,16 @@ export class SinguardarGuard implements CanDeactivate<unknown> {
     currentRoute: ActivatedRouteSnapshot,
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    
+    if(this.logeado()){
+      return true;
+    }
+   
+    return confirm("Estas saliendo sin haber guardado los cambios")
+  }
+
+  logeado():boolean{
+    return false;
   }
   
 }

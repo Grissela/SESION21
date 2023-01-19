@@ -5,22 +5,22 @@ leading-4 sm:text-center">
     <h1 class="sm:min-width[360px] max-width[640px] text-base md:text-lg font-bold p-3 pb-4 text-center">Registro de Usuarios</h1>
 
     <div class="mb-5 p-2 mx-auto">
-        <label for="" class="sm:min-width[360px] max-width[640px] py-5 text-sm md:text-center mr-6 text-lg">Email </label>
-        <input type="email" class="mx-auto text-black rounded 
+        <label for="" class="sm:min-width[360px] max-width[640px] py-5 text-sm md:text-center mr-1 text-lg">Username</label>
+        <input type="text" [(ngModel)]="username" class="mx-auto text-black rounded 
         sm:min-width[360px] mb-2 max-width[640px] w-[6rem]
         md:w-[10rem]">
     </div>
 
     <div class="mb-5 p-2 mx-auto">
         <label for="" class="sm:min-width[360px] max-width[640px] py-5 text-sm md:text-center  text-lg">Password </label>
-        <input type="password" class="mx-auto text-black rounded 
+        <input type="password"  [(ngModel)]="password" class="mx-auto text-black rounded 
         sm:min-width[360px] mb-2 max-width[640px] w-[6rem]
         md:w-[10rem]">
     </div>
 
     <div class="mt-3 text-center">
-        <button class="sm:min-width[360px] max-width[640px] w-[5rem] text-sm text-center bg-red-700 hover:bg-red-400  font-semibold
-        md:text-base w-[7rem] py-2 text-center bg-red-700 rounded hover:bg-red-400 mx-auto font-semibold">Registrarse</button>
+        <button type="button" class="sm:min-width[360px] max-width[640px] w-[5rem] text-sm text-center bg-red-700 hover:bg-red-400  font-semibold
+        md:text-base w-[7rem] py-2 text-center bg-red-700 rounded hover:bg-red-400 mx-auto font-semibold" (click)="validacion()">Registrarse</button>
     </div>
 </div>
 

@@ -13,6 +13,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
   logout(){
     Swal.fire({
       title: '¿Desea salir?',
@@ -50,4 +52,5 @@ export class HeaderComponent implements OnInit {
     
     
   }
+  
 }

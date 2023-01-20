@@ -1,11 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import {ThemePalette} from '@angular/material/core';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+
+
+
 export class LoginComponent implements OnInit {
 
   user:string="AD"
@@ -19,6 +26,8 @@ export class LoginComponent implements OnInit {
 
   token="true";
   load!:boolean;
+
+  seleccionado:boolean=false;
   constructor(private route:Router) {
     this.load=false;
    }
@@ -35,7 +44,7 @@ export class LoginComponent implements OnInit {
     // this.new_user = localStorage.getItem('user');
     // this.new_pass = localStorage.getItem('pas');
 
-    if(this.user == this.username && this.pas==this.password){
+    if(this.user == this.username && this.pas==this.password && this.seleccionado){
       localStorage.setItem('logeado',this.token);
       this.route.navigate(['login']);
       
@@ -55,11 +64,8 @@ export class LoginComponent implements OnInit {
       footer: '<a href="">¿Porqué me sale este error?</a>'
     })
   }
-
-
-  
-
-   
+}
 
 }
-}
+
+

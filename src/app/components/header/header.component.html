@@ -1,15 +1,32 @@
-<div class="bg-slate-700 py-3 ">
+<!-- <div class="bg-slate-700 py-3 ">
     <div class="flex justify-end items-center px-6">
-      <a routerLink="home"  routerLinkActive="text-teal-500" class="text-white font-bold px-6 hover:text-teal-300"><i class="bi bi-house"></i> HOME</a>
+        <a routerLink="home"  routerLinkActive="text-teal-500" class="text-white font-bold px-6 hover:text-teal-300"><i class="bi bi-house"></i> HOME</a>
         <a routerLink="post"  routerLinkActive="text-teal-500" class="text-white font-bold hover:text-teal-300"><i class="bi bi-file-earmark-post-fill"></i> POST</a>
         <a routerLink="formulario"  routerLinkActive="text-teal-500" class="text-white font-bold px-6 hover:text-teal-300"><i class="bi bi-ui-checks"></i> FORMULARIO</a>
       <div class="ml-10">
         <button (click)="logout()"><a routerLink=""><i class="bi bi-person-circle p-5 text-white text-2xl hover:text-red-400"></i></a></button>
-
-
       </div>
     </div>
-  </div>
-<br>
+  </div> -->
+
+  <mat-toolbar color="secondary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+      
+
+    <span class="example-spacer"></span>
+      <a mat-button routerLink="home"  routerLinkActive="text-teal-500" class="example-a p-2 hover:text-teal-500"><mat-icon>home</mat-icon>Home</a>
+      <a mat-button routerLink="post" routerLinkActive="text-teal-500" class="example-a p-2 hover:text-teal-500"><mat-icon>post_add</mat-icon>Post</a>
+      
+      <a mat-button routerLink="formulario" routerLinkActive="text-teal-500" class="example-a p-2 hover:text-teal-500"><mat-icon>task</mat-icon>Formulario</a>
+    <button mat-icon-button class="example-icon favorite-icon hover:text-red-400" aria-label="Example icon-button with heart icon" (click)="logout()">
+      <a a routerLink=""><mat-icon>account_circle</mat-icon></a>
+      
+    </button>
+    
+  </mat-toolbar>
+
 
 

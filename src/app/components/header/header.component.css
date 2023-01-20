@@ -1,4 +1,4 @@
-h1, i {
+h1, mat-icon {
     animation-duration: 3s;
     animation-name: slidein;
   }
@@ -16,7 +16,7 @@ h1, i {
     }
   }
 
-  ul, ol {
+  /* ul, ol {
     list-style:none;
 }
 
@@ -53,4 +53,22 @@ h1, i {
 .nav li ul li ul {
     right:-140px;
     top:0px;
+} */
+/* .container-progressbar{
+  width: 100%;
+  height: 40px;
+  background: #333;
+  position: fixed;
+  top: 0;
+}
+*/
+::ng-deep .mat-progress-bar .mat-progress-bar-background{
+  animation-direction: reverse !important;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.example-a{
+  padding: 20;
 }

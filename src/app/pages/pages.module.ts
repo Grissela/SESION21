@@ -11,6 +11,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 
@@ -30,8 +32,10 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    MatProgressSpinnerModule
-    
+    MatProgressSpinnerModule,
+    MatCheckboxModule,
+    MatProgressBarModule,
+
   ],
   exports: [
     HomeComponent,

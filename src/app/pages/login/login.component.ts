@@ -18,12 +18,16 @@ export class LoginComponent implements OnInit {
   new_pass!:string | null;
 
   token="true";
-  constructor(private route:Router) { }
+  load!:boolean;
+  constructor(private route:Router) {
+    this.load=false;
+   }
 
+  
   ngOnInit(): void {
     
   }
-
+  
   validacion(){
     // localStorage.setItem('user','AD');
     // localStorage.setItem('pas','12345')
@@ -34,6 +38,7 @@ export class LoginComponent implements OnInit {
     if(this.user == this.username && this.pas==this.password){
       localStorage.setItem('logeado',this.token);
       this.route.navigate(['login']);
+      
       Swal.fire({
         position: 'top-end',
         icon: 'success',

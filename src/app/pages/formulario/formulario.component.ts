@@ -79,17 +79,22 @@ export class FormularioComponent implements OnInit {
         })
     
     }else {
-      // alert ('Los campos no debe estar vacio')
+      alert ('Los campos no debe estar vacio')
       Swal.fire({
-      title: 'هل تريد الاستمرار؟',
-      icon: 'question',
-      iconHtml: '؟',
-      confirmButtonText: 'نعم',
-      cancelButtonText: 'لا',
-      showCancelButton: true,
-      showCloseButton: true
-    })
-    }
+        title: '¿Quieres guardar los cambios?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Guardar',
+        denyButtonText: `No guardar`,
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire('Guardado', '', 'success')
+        } else if (result.isDenied) {
+          Swal.fire('Los cambios no se han guardado', '', 'info')
+        }
+      })
+     }
 
   }
   mostrar(){

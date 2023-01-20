@@ -9,7 +9,7 @@ import { PostComponent } from './pages/post/post.component';
 
 const routes: Routes = [
         {path:'login', component:LoginComponent},
-        {path:'home', component:HomeComponent, canActivate:[PermissesGuard]},
+        {path:'home', component:HomeComponent, canActivate:[PermissesGuard] },
         {path:'post', component:PostComponent,  canActivate:[PermissesGuard]},
         {path:'formulario', component:FormularioComponent, canActivate:[PermissesGuard],
          canDeactivate:[SinguardarGuard]}

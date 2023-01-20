@@ -8,7 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { PostComponent } from './pages/post/post.component';
 
 const routes: Routes = [
-        {path:'login', component:LoginComponent},
+        {path:'', component:LoginComponent},
         {path:'home', component:HomeComponent, canActivate:[PermissesGuard] },
         {path:'post', component:PostComponent,  canActivate:[PermissesGuard]},
         {path:'formulario', component:FormularioComponent, canActivate:[PermissesGuard],
